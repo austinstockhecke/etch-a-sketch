@@ -1,0 +1,18 @@
+.container {
+text-align:center;
+}
+
+.col {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.row {
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
