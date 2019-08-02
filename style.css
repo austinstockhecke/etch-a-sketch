@@ -1,8 +1,41 @@
-.container {
-text-align:center;
+:root {
+    --gridNum: 0;
 }
 
-.col {
+body {
+    font-family: Arial;
+}
+
+.container {
+margin: auto;
+display: grid;
+border: 1px solid black;
+width: 600px;
+height: 600px;
+grid-template-rows: repeat(var(--gridNum), auto); 
+grid-template-columns: repeat(var(--gridNum), auto);
+}
+
+.button-wrapper {
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 30px;
+    outline: none;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+/*.col {
     width: 25px;
     height: 25px;
     display: inline-block;
@@ -15,4 +48,5 @@ text-align:center;
     border: 1px solid black;
     display: inline-block;
     vertical-align: top;
-}
+}*/
+
