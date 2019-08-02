@@ -12,7 +12,7 @@ function createGrid(numSquares) {
         contain.appendChild(gridSquares);
 
     }
-    
+
     let changeRow = document.querySelectorAll("[class=gridSquare]");
     Object.entries(changeRow).map((object) => {
     object[1].addEventListener("mouseenter", function(event) {
@@ -32,7 +32,13 @@ createGrid(16);
 
 let resetButton = document.querySelector("[class=reset]");
 resetButton.addEventListener("click", function () {
-   let reSize = prompt("How many grid squares would you like? (5-100)");
+   let reSize = 4;
+   while (reSize < 5 || reSize > 100){
+   reSize = prompt("How many grid squares would you like? (5-100)");
+        if (reSize == null) {
+            reSize = 16;
+        }
+   }
    resetGrid();
    createGrid(reSize);
     
